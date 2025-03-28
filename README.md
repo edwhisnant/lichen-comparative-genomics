@@ -1,6 +1,12 @@
 # Genome annotation programs
 A repo on working with and testing genome annotation programs
 
+## Genome quality control
+
+### EukCC
+
+EukCC is a genome quality assessment program.
+
 ## Annotations programs/pipelines
 
 ### Funannotate
