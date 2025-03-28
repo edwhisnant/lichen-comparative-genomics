@@ -61,3 +61,25 @@ tar -xzvf eukcc2_db_ver_1.2.tar.gz
 export EUKCC2_DB=$(realpath eukcc2_db_ver_1.2)
 
 ```
+
+## BUSCO
+
+[Here](https://busco.ezlab.org/busco_userguide.html#installation-with-conda) is the BUSCO user guide
+
+This installation is memory and computing intensive. It is reccomended that you change to a different node:
+
+```{}
+srun -c 4 --mem=8G -p scavenger --pty bash -i
+
+# OR
+
+srun -c 4 --mem=8G -p common --pty bash -i
+```
+
+
+Install BUSCO via conda and create a cond env for BUSCO:
+
+```{}
+conda create -n busco -c conda-forge -c bioconda busco=5.8.2
+
+```
