@@ -8,5 +8,6 @@ Here is the link to the script: [01_busco_arrays_templaye.sh](https://github.com
 
 ## 02_busco_analysis.sh
 
+Here is the link to the shell script: [02_busco_analysis_template.sh](https://github.com/edwhisnant/genome_annotation_programs/blob/main/quality-control/BUSCO/scripts/02_busco_analysis_template.sh)
 
-
+Here is the link to the associated R script: [busco](https://github.com/edwhisnant/genome_annotation_programs/blob/main/quality-control/BUSCO/scripts/02_busco_analysis_template.sh)
