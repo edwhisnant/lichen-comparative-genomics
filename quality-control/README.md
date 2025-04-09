@@ -1,5 +1,21 @@
 # Quality Control of Genomes and Annotations
 
+# Sourmash
+
+Sourmash is a command line tool for searching, comparing, and analyzing genomic and metagenomic data.
+
+### How to set up `sourmash`
+
+[sourmash guide](https://sourmash.readthedocs.io/en/latest/tutorial-install.html)
+
+sourmash can be installed via conda or mamba
+
+```{}
+#  create a new conda env and install sourmash-minimal
+conda create -y -n smash sourmash-minimal
+
+```
+
 # EUKCC
 
 EukCC is a completeness and contamination estimator for metagenomic assembled microbial eukaryotic genomes.
