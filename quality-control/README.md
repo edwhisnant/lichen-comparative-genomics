@@ -1,4 +1,4 @@
-# Overview of my methodology
+# Overview of my methods
 
 1. Creating the genome catalog and database
 
@@ -8,7 +8,7 @@ For my first analysis, I am looking scrictly at the Lecanormycetes. I created a 
 
 Each genome was run through BUSCO, using the `ascomycota_odb12` database. Genomes with <= 95% **single copy ortholog completenes** were filtered out. The standard BUSCO analysis was run, followed by a custom script to extract BUSCO data and analyze the output of the BUSCO analysis for each genome. After this filtering, 118 genomes remained. For these scripts click [here](https://github.com/edwhisnant/genome_annotation_programs/tree/main/quality-control/BUSCO/scripts).
 
-Next, I manually gathered genome coverage information from the NCBI and JGI entry for each genome. Genomic coverage is another metric for sequencing depth, or how many times the whole genome was sequenced entirely. Generally, the higher the coverage, the more confident you can be of the "completeness" of the genome. Higher coverage can also improve the length of scaffold and contigs (the longer these are the less fragmented the genome). In this step, I retained genomes of >= 25x coverage. After this step, 107 genomes remained.
+Next, I manually gathered genome coverage information from the NCBI and JGI entry for each genome. Genomic coverage is another metric for sequencing depth, or how many times the whole genome was sequenced entirely. Generally, the higher the coverage, the more confident you can be of the "completeness" of the genome. Higher coverage can also improve the length of scaffold and contigs (the longer these are the less fragmented the genome). In this step, I retained genomes of >= 25x coverage. After this step, 107 genomes remained. A TSV of the genomes remaining after the coverage filtering can be found [here](). This was moved into a directory in the DCC to begin the next step of the QC pipeline.
 
 Next, I need to identify any contamination that may exist in the genome sequence. Since the majority of these have gone through NCBI's filter, they are most likely clean of adaptors or other reminants of the sequencing itself. However, since the majority of the remaining genomes are metagenoome assembled genomes (MAGs), I am opting to run them through a contamination filtering step.
 
