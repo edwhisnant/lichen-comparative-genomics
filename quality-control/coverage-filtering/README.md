@@ -10,6 +10,9 @@ Below is the code that was used to filter for coverage:
 
 
 ```{r}
+
+busco_filtered_genomes_db_95 <- read_xlsx("~/busco_filtered_genomes_db_95.xlsx")
+
 #########################################################################################
 ##                              FILTER >= 25X COVERAGE                                  #
 #########################################################################################
