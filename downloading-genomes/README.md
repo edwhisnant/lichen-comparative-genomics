@@ -1,0 +1,3 @@
+# How I downloaded the genomes from NCBI and JGI
+
+For my first analysis, I am looking scrictly at the Lecanormycetes. I created a spreadsheet and cataloged with all of the publicly available genomes from NCBI and JGI that were attributed to the Lecanoromycetes. I gathered all pertinent taxonomic information using NCBI tax, links to download the genomes and other information I felt would be useful. In all, this resulted in 442 genomes being cataloged. Then, I used the links to download the genomes. This script can be found [here](). This script reads-in the csv or tsv file spreadsheet and downloads, unzips, and renames each genome file. This worked for most of the genomes, except for the ones from JGI. These needed to downloaded manually from their website.
