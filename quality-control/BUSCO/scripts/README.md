@@ -16,7 +16,7 @@ Here is the link to the associated R script: [busco_summary_cleaner.R](https://g
 
 The busco conda environment has an installation of R built in. The R script should be run within the `busco` conda env to ensure it works as intended.
 
-## OVERVIEW OF THIS SCRIPT:
+## OVERVIEW OF WHAT THESE DO:
 
 * The first script runs BUSCO using a directory of `*.fa` FASTA genomes. The current script uses the Ascomycota database for the analysis. What it returns is a summary for each genome for several BUSCO metrics. It is currently written to create a single directory `BUSCO_summary` and create a copy of the summary files from the genomes that were analzyed.
 
