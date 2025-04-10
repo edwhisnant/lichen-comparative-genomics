@@ -14,8 +14,10 @@ Here is the link to the shell script: [02_busco_analysis_template.sh](https://gi
 
 Here is the link to the associated R script: [busco_summary_cleaner.R](https://github.com/edwhisnant/genome_annotation_programs/blob/main/quality-control/BUSCO/scripts/busco_summary_cleaner.R)
 
+The busco conda environment has an installation of R built in. The R script should be run within the `busco` conda env to ensure it works as intended.
+
 ## OVERVIEW OF THIS SCRIPT:
 
-* The first script runs BUSCO using a directory of `*.fa` FASTA genomes. The current script uses the Ascomycota database. What it returns is a summary for each genome for several BUSCO metrics. It is currently written to create a single directory `BUSCO_summary` and create a copy of the summary files from the genomes that were analzyed.
+* The first script runs BUSCO using a directory of `*.fa` FASTA genomes. The current script uses the Ascomycota database for the analysis. What it returns is a summary for each genome for several BUSCO metrics. It is currently written to create a single directory `BUSCO_summary` and create a copy of the summary files from the genomes that were analzyed.
 
-* The second script takes the contents of `BUSCO_summary` and compiles the data into a single TSV file `combined_summary.tsv`. BUSCO has it's own analysis program that will create figures and summarize *some* of the outputs. I have written a script to gather ALL of the output from the BUSCO analysis and then run some analysis via R. This will give all of BUSCO summary data plus this information expressed as a percentage (which is how it is normally reported).
+* The second script takes the contents of `BUSCO_summary` and compiles the data into a single TSV file `combined_summary.tsv`. BUSCO has it's own analysis program that will create figures and summarize *some* of the outputs. I have written a script to gather ALL of the output from the BUSCO analysis and then run some brief analysis via R. This will give all of BUSCO summary data plus this information expressed as a percentage (which is how it is normally reported).
