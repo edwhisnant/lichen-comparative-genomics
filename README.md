@@ -28,4 +28,16 @@ EukCC is a genome quality assessment program. It gives some ideas about contamin
 ### Funannotate
 I have been wokring on genome annotation pipeline via Funannotate. For my scripts and notes see [here](https://github.com/edwhisnant/funannotate)
 
+I am currently using a new version of funannotate v2, which accomodates newer BUSCO models and streamlines the analysis pipeline.
+
+* [Here](https://github.com/edwhisnant/funannotate/tree/main/funannotate2) is my repo for my scripts and notes.
+
+## Comparative genomics
+
+### OrthoFinder
+
+OrthoFinder is used to find orthologs and shared orthogroups among your genomes.
+
+*[Here](https://github.com/edwhisnant/lichen-comparative-genomics/tree/main/compare/scripts/orthofinder) are my scripts and notes for running OrthoFinder.
+
 ### DRAM
