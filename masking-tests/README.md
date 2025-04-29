@@ -28,7 +28,7 @@ Here I am testing 5 combinations of masking or unmasking strategies (in order fr
 
 * `f2-clagr3-hardmask.sh`: Works as expected (default settings)
 
-`f2-clagr3-hardmask-nolow.sh`: `-nolow` or `l` flag results in no masked output file and the script crashes
+* `f2-clagr3-hardmask-nolow.sh`: `-nolow` or `l` flag results in no masked output file and the script crashes
 
 The only output is:
 
@@ -44,8 +44,8 @@ The only output is:
 There were no repetitive sequences detected in /hpc/group/bio1/ewhisnant/armaleo-data/funannotate2/clagr3_f2/cleaned-genomes/Clagr3_AssemblyScaffolds_cleaned.fasta
 ```
 
-`f2-clagr3-softmask.sh`: Works as expected
+* `f2-clagr3-softmask.sh`: Works as expected
 
-`f2-clagr3-unmask.sh`: Works as expected (no masking)
+* `f2-clagr3-unmask.sh`: Works as expected (no masking)
 
-`run-all-f2-scripts.sh`
+* `run-all-f2-scripts.sh`
