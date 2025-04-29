@@ -28,17 +28,104 @@ Here I am testing 5 combinations of masking or unmasking strategies (in order fr
 
 * `f2-clagr3-hardmask.sh`: Works as expected (default settings)
 
+**Hardmask (default) command:**
+
+```{}
+RepeatMasker \
+    --species "Fungi" \
+    ${CLEANED_ASSEMBLY} \
+    --dir ${MASKED_DIR} \
+    -pa 11 \
+
+# "--xsmall" to soft-mask, rather than hardmask
+# "--nolow" to ignore low complexity regions (better for the prediction of exons/introns)
+# "--pa 11" to use 11 threads
+# "--species Fungi" to use the Fungi library
+
+# CHECK IF THE MASKED FILE EXISTS, THEN RENAME IT 
+if [ -f ${MASKED_DIR}/${BASENAME}_cleaned.fasta.masked ]; then
+    mv ${MASKED_DIR}/${BASENAME}_cleaned.fasta.masked ${REPEATMASKED_ASSEMBLY}
+    echo "Genome soft-masked"
+else
+    echo "Error: Masked file not found for ${BASENAME}!"
+    exit 1
+fi
+```
+
+**Example of hard-masking**
+
+```{}
+>scaffold_00001
+CCCCCGCGCTTCGTCCTCCCCCTCCCAACCCCCCAACAAANNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNCCA
+GCCGCACTACCCGCATTATTCACATCCCCACCCCGCCGCGGACAGAAATA
+CGTTCCTGGTGGAATGGCAGCTACGGTTCGCGATTGGACTGTGGAGGCTG
+GGGAAATGGCGCATAACCGGAACCAGAGGAGGGGAGTTGGAGGGGATGGC
+GGGGAGTGGGATAGGAGGTTTAGACTTGGTGAGTGTGTGGATGGAGGGGG
+```
+
 * `f2-clagr3-hardmask-nolow.sh`: `-nolow` or `l` flag results in no masked output file and the script crashes
 
-The only output is:
+**Hardmask with `-nolow` option:**
+
+```{}
+RepeatMasker \
+    --species "Fungi" \
+    ${CLEANED_ASSEMBLY} \
+    --dir ${MASKED_DIR} \
+    -pa 11 \
+    -nolow
+   
+# "--xsmall" to soft-mask, rather than hardmask
+# "--nolow" to ignore low complexity regions (better for the prediction of exons/introns)
+# "--pa 11" to use 11 threads
+# "--species Fungi" to use the Fungi library
+
+# CHECK IF THE MASKED FILE EXISTS, THEN RENAME IT 
+if [ -f ${MASKED_DIR}/${BASENAME}_cleaned.fasta.masked ]; then
+    mv ${MASKED_DIR}/${BASENAME}_cleaned.fasta.masked ${REPEATMASKED_ASSEMBLY}
+    echo "Genome soft-masked"
+else
+    echo "Error: Masked file not found for ${BASENAME}!"
+    exit 1
+fi
+```
+
+**Output of this:**
 
 ```{}
 There were no repetitive sequences detected in /hpc/group/bio1/ewhisnant/armaleo-data/funannotate2/clagr3_f2/cleaned-genomes/Clagr3_AssemblyScaffolds_cleaned.fasta
 ```
 
-`f2-clagr3-softmask-nolow.sh`:  `-nolow` or `l` flag results in no masked output file and the script crashes
+* `f2-clagr3-softmask-nolow.sh`:  `-nolow` or `l` flag results in no masked output file and the script crashes
 
-The only output is:
+**Soft-masked with `--xsmall ` and `-nolow` options:**
+
+```{}
+RepeatMasker \
+    --species "Fungi" \
+    ${CLEANED_ASSEMBLY} \
+    --dir ${MASKED_DIR} \
+    -pa 11 \
+    -nolow \
+    --xsmall
+
+# "--xsmall" to soft-mask, rather than hardmask
+# "--nolow" to ignore low complexity regions (better for the prediction of exons/introns)
+# "--pa 11" to use 11 threads
+# "--species Fungi" to use the Fungi library
+
+# CHECK IF THE MASKED FILE EXISTS, THEN RENAME IT 
+if [ -f ${MASKED_DIR}/${BASENAME}_cleaned.fasta.masked ]; then
+    mv ${MASKED_DIR}/${BASENAME}_cleaned.fasta.masked ${REPEATMASKED_ASSEMBLY}
+    echo "Genome soft-masked"
+else
+    echo "Error: Masked file not found for ${BASENAME}!"
+    exit 1
+fi
+```
+
+**Output of this:**
 
 ```{}
 There were no repetitive sequences detected in /hpc/group/bio1/ewhisnant/armaleo-data/funannotate2/clagr3_f2/cleaned-genomes/Clagr3_AssemblyScaffolds_cleaned.fasta
@@ -46,6 +133,54 @@ There were no repetitive sequences detected in /hpc/group/bio1/ewhisnant/armaleo
 
 * `f2-clagr3-softmask.sh`: Works as expected
 
+**Soft-masked with `--xsmall` without `nolow`:**
+
+```{}
+RepeatMasker \
+    --species "Fungi" \
+    ${CLEANED_ASSEMBLY} \
+    --dir ${MASKED_DIR} \
+    -pa 11 \
+    --xsmall
+
+# "--xsmall" to soft-mask, rather than hardmask
+# "--nolow" to ignore low complexity regions (better for the prediction of exons/introns)
+# "--pa 11" to use 11 threads
+# "--species Fungi" to use the Fungi library
+
+# CHECK IF THE MASKED FILE EXISTS, THEN RENAME IT 
+if [ -f ${MASKED_DIR}/${BASENAME}_cleaned.fasta.masked ]; then
+    mv ${MASKED_DIR}/${BASENAME}_cleaned.fasta.masked ${REPEATMASKED_ASSEMBLY}
+    echo "Genome soft-masked"
+else
+    echo "Error: Masked file not found for ${BASENAME}!"
+    exit 1
+fi
+```
+
+**Example of soft-masking**
+
+```{}
+>scaffold_00001
+CCCCCGCGCTTCGTCCTCCCCCTCCCAACCCCCCAACAAAccactcatcc
+cctcccgcccgcccctcatacttcctccccgctcccccacccccccaCCA
+GCCGCACTACCCGCATTATTCACATCCCCACCCCGCCGCGGACAGAAATA
+CGTTCCTGGTGGAATGGCAGCTACGGTTCGCGATTGGACTGTGGAGGCTG
+GGGAAATGGCGCATAACCGGAACCAGAGGAGGGGAGTTGGAGGGGATGGC
+GGGGAGTGGGATAGGAGGTTTAGACTTGGTGAGTGTGTGGATGGAGGGGG
+```
+
 * `f2-clagr3-unmask.sh`: Works as expected (no masking)
 
-* `run-all-f2-scripts.sh`
+**Example of unmasked**
+
+```{}
+>scaffold_00001
+CCCCCGCGCTTCGTCCTCCCCCTCCCAACCCCCCAACAAACCACTCATCCCCTCCCGCCCGCCCCTCATACTTCCTCCCC
+GCTCCCCCACCCCCCCACCAGCCGCACTACCCGCATTATTCACATCCCCACCCCGCCGCGGACAGAAATACGTTCCTGGT
+GGAATGGCAGCTACGGTTCGCGATTGGACTGTGGAGGCTGGGGAAATGGCGCATAACCGGAACCAGAGGAGGGGAGTTGG
+AGGGGATGGCGGGGAGTGGGATAGGAGGTTTAGACTTGGTGAGTGTGTGGATGGAGGGGGGATGGTGTTGGTGAGGGAGA
+GGGAGGTGGCGAGGGGGTGGGTGCTTGTTGGGATTGGGAGGGGGGATGGGGATGTTGAGGTGGGGAGGGTGGTTGGTGTT
+AGGGAGCCGGTTTGGGATGTTGAGGTGGGGGGAGAGGGATGGAGTGTCGCTGTTGAGTGGGGGGTTGTGGATGGGTAGGA
+GTTGCAAGCAGCCATCTATATTAAGTGAAAAGGGAGCATCGAGGAAAAGAAAGGCTGAGCCATGGTGGGAGAGGGTGGGA
+```
