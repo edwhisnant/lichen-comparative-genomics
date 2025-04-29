@@ -76,6 +76,70 @@ GGGAAATGGCGCATAACCGGAACCAGAGGAGGGGAGTTGGAGGGGATGGC
 GGGGAGTGGGATAGGAGGTTTAGACTTGGTGAGTGTGTGGATGGAGGGGG
 ```
 
+**Genome stats**
+
+```{}
+{
+  "n_contigs": 413,
+  "size": 34610783,
+  "softmasked": "1.05%",
+  "gaps": "1.05%",
+  "n50": 243412,
+  "n90": 43471,
+  "l50": 43,
+  "l90": 170,
+  "avg_length": 83803
+}
+```
+
+**Annotation summary stats from funannotate2**
+
+```{}
+{
+    "genes": 9727,
+    "common_name": 602,
+    "mRNA": 9680,
+    "tRNA": 47,
+    "ncRNA": 0,
+    "rRNA": 0,
+    "repeat_region": 0,
+    "misc_feature": 0,
+    "avg_gene_length": 1788.99,
+    "transcript-level": {
+        "CDS_transcripts": 9680,
+        "CDS_five_utr": 0,
+        "CDS_three_utr": 0,
+        "CDS_no_utr": 9680,
+        "CDS_five_three_utr": 0,
+        "CDS_complete": 9590,
+        "CDS_no-start": 28,
+        "CDS_no-stop": 62,
+        "CDS_no-start_no-stop": 0,
+        "total_exons": 29929,
+        "total_cds_exons": 29929,
+        "average_number_transcripts_per_gene": 1.0,
+        "multiple_exon_transcript": 7562,
+        "single_exon_transcript": 2118,
+        "average_number_cds_exons": 3.09,
+        "avg_exon_length": 513.16,
+        "median_number_exons": 3.0,
+        "max_number_exons": 24,
+        "avg_protein_length": 528.9,
+        "avg_transcript_length": 1586.6,
+        "functional": {
+            "go_terms": 0,
+            "interproscan": 0,
+            "eggnog": 0,
+            "pfam": 6949,
+            "cazyme": 255,
+            "merops": 269,
+            "busco": 2769,
+            "secretion": 0
+        }
+    }
+}
+```
+
 * `f2-clagr3-hardmask-nolow.sh`: `-nolow` or `l` flag results in no masked output file and the script crashes
 
 **Hardmask with `-nolow` option:**
@@ -182,7 +246,72 @@ GGGAAATGGCGCATAACCGGAACCAGAGGAGGGGAGTTGGAGGGGATGGC
 GGGGAGTGGGATAGGAGGTTTAGACTTGGTGAGTGTGTGGATGGAGGGGG
 ```
 
+**Genome stats**
+
+```{}
+{
+  "n_contigs": 413,
+  "size": 34610783,
+  "softmasked": "1.05%",
+  "gaps": "0.16%",
+  "n50": 243412,
+  "n90": 43471,
+  "l50": 43,
+  "l90": 170,
+  "avg_length": 83803
+}
+```
+
+**Annotation summary from funannotate2**
+
+```{}
+{
+  "genes": 9302,
+  "common_name": 579,
+  "mRNA": 9255,
+  "tRNA": 47,
+  "ncRNA": 0,
+  "rRNA": 0,
+  "repeat_region": 0,
+  "misc_feature": 0,
+  "avg_gene_length": 1827.51,
+  "transcript-level": {
+    "CDS_transcripts": 9255,
+    "CDS_five_utr": 0,
+    "CDS_three_utr": 0,
+    "CDS_no_utr": 9255,
+    "CDS_five_three_utr": 0,
+    "CDS_complete": 9179,
+    "CDS_no-start": 33,
+    "CDS_no-stop": 43,
+    "CDS_no-start_no-stop": 0,
+    "total_exons": 27476,
+    "total_cds_exons": 27476,
+    "average_number_transcripts_per_gene": 1.0,
+    "multiple_exon_transcript": 6936,
+    "single_exon_transcript": 2319,
+    "average_number_cds_exons": 2.97,
+    "avg_exon_length": 552.59,
+    "median_number_exons": 2,
+    "max_number_exons": 24,
+    "avg_protein_length": 546.83,
+    "avg_transcript_length": 1640.52,
+    "functional": {
+      "go_terms": 0,
+      "interproscan": 0,
+      "eggnog": 0,
+      "pfam": 6775,
+      "cazyme": 253,
+      "merops": 261,
+      "busco": 2772,
+      "secretion": 0
+    }
+  }
+```
+
 * `f2-clagr3-unmask.sh`: Works as expected (no masking)
+
+NOTE: Unnmasked genomes are automatically masked using `pytantan`
 
 **Example of unmasked**
 
@@ -195,4 +324,68 @@ AGGGGATGGCGGGGAGTGGGATAGGAGGTTTAGACTTGGTGAGTGTGTGGATGGAGGGGGGATGGTGTTGGTGAGGGAGA
 GGGAGGTGGCGAGGGGGTGGGTGCTTGTTGGGATTGGGAGGGGGGATGGGGATGTTGAGGTGGGGAGGGTGGTTGGTGTT
 AGGGAGCCGGTTTGGGATGTTGAGGTGGGGGGAGAGGGATGGAGTGTCGCTGTTGAGTGGGGGGTTGTGGATGGGTAGGA
 GTTGCAAGCAGCCATCTATATTAAGTGAAAAGGGAGCATCGAGGAAAAGAAAGGCTGAGCCATGGTGGGAGAGGGTGGGA
+```
+
+**Genome stats**
+
+```{}
+{
+  "n_contigs": 413,
+  "size": 34610783,
+  "softmasked": "0.16%",
+  "gaps": "0.16%",
+  "n50": 243412,
+  "n90": 43471,
+  "l50": 43,
+  "l90": 170,
+  "avg_length": 83803
+}
+```
+
+**Annotation summary from funannotate2**
+
+```{}
+{
+    "genes": 9441,
+    "common_name": 599,
+    "mRNA": 9394,
+    "tRNA": 47,
+    "ncRNA": 0,
+    "rRNA": 0,
+    "repeat_region": 0,
+    "misc_feature": 0,
+    "avg_gene_length": 1788.24,
+    "transcript-level": {
+        "CDS_transcripts": 9394,
+        "CDS_five_utr": 0,
+        "CDS_three_utr": 0,
+        "CDS_no_utr": 9394,
+        "CDS_five_three_utr": 0,
+        "CDS_complete": 9313,
+        "CDS_no-start": 38,
+        "CDS_no-stop": 43,
+        "CDS_no-start_no-stop": 0,
+        "total_exons": 27477,
+        "total_cds_exons": 27477,
+        "average_number_transcripts_per_gene": 1.0,
+        "multiple_exon_transcript": 6943,
+        "single_exon_transcript": 2451,
+        "average_number_cds_exons": 2.92,
+        "avg_exon_length": 552.09,
+        "median_number_exons": 2.0,
+        "max_number_exons": 24,
+        "avg_protein_length": 538.25,
+        "avg_transcript_length": 1614.83,
+        "functional": {
+            "go_terms": 0,
+            "interproscan": 0,
+            "eggnog": 0,
+            "pfam": 6847,
+            "cazyme": 247,
+            "merops": 260,
+            "busco": 2787,
+            "secretion": 0
+        }
+    }
+}
 ```
