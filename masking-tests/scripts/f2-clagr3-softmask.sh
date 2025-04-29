@@ -10,7 +10,7 @@ GENOME=/hpc/group/bio1/ewhisnant/armaleo-data/Clagr3/assemblies/Clagr3_AssemblyS
 BASENAME=$(basename "${GENOME}" .fasta) # Extract the base name of the genome file
 
 # Define the variables for the rest of the anlaysis
-MASKED_DIR=/hpc/group/bio1/ewhisnant/armaleo-data/funannotate2/clagr3/masked-genomes/softmask
+MASKED_DIR=/hpc/group/bio1/ewhisnant/armaleo-data/funannotate2/clagr3_f2/masked-genomes/softmask
 CLEANED_ASSEMBLY=/hpc/group/bio1/ewhisnant/armaleo-data/funannotate2/clagr3_f2/cleaned-genomes/${BASENAME}_cleaned.fasta
 REPEATMASKED_ASSEMBLY=${MASKED_DIR}/${BASENAME}_sorted.cleaned.softmasked.fasta
 

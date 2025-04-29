@@ -10,7 +10,7 @@ GENOME=/hpc/group/bio1/ewhisnant/armaleo-data/Clagr3/assemblies/Clagr3_AssemblyS
 BASENAME=$(basename "${GENOME}" .fasta) # Extract the base name of the genome file
 
 # Define the variables for the rest of the anlaysis
-MASKED_DIR=/hpc/group/bio1/ewhisnant/armaleo-data/funannotate2/clagr3/masked-genomes/hardmask-nolow
+MASKED_DIR=/hpc/group/bio1/ewhisnant/armaleo-data/funannotate2/clagr3_f2/masked-genomes/hardmask-nolow
 CLEANED_ASSEMBLY=/hpc/group/bio1/ewhisnant/armaleo-data/funannotate2/clagr3_f2/cleaned-genomes/${BASENAME}_cleaned.fasta
 REPEATMASKED_ASSEMBLY=${MASKED_DIR}/${BASENAME}_sorted.cleaned.hardmasked.nolow.fasta
 
@@ -61,8 +61,7 @@ RepeatMasker \
     --dir ${MASKED_DIR} \
     -pa 11 \
     -nolow
-    # --xsmall
-
+   
 # "--xsmall" to soft-mask, rather than hardmask
 # "--nolow" to ignore low complexity regions (better for the prediction of exons/introns)
 # "--pa 11" to use 11 threads
