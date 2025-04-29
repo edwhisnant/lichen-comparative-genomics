@@ -1,4 +1,4 @@
-# Testing masking algorithims and strategies
+# Testing masking strategies
 
 There are some questions about which masking protocol is the "better" protocol. 
 
