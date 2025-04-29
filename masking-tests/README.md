@@ -23,3 +23,17 @@ Here I am testing 5 combinations of masking or unmasking strategies (in order fr
 4. Soft-maksing (with `nolow`): skips soft-masking for low-complexity regions
 
 5. Unamsked: Genome is remains unmasked.
+
+### Scripts
+
+* `f2-clagr3-hardmask.sh`: Works as expected (default settings)
+
+`f2-clagr3-hardmask-nolow.sh`: `-nolow` or `l` flag results in no masked output file and the script crashes
+
+`f2-clagr3-softmask-nolow.sh`:  `-nolow` or `l` flag results in no masked output file and the script crashes
+
+`f2-clagr3-softmask.sh`: Works as expected
+
+`f2-clagr3-unmask.sh`: Works as expected (no masking)
+
+`run-all-f2-scripts.sh`
