@@ -24,6 +24,18 @@ Here I am testing 5 combinations of masking or unmasking strategies (in order fr
 
 5. Unamsked: Genome is remains unmasked.
 
+**Why skip the masking of low-complexity regions:**
+
+```{}
+-nolow / -l(ow)
+With the option -nolow or -l(ow) only interspersed repeats are
+masked. By default simple tandem repeats and low complexity
+(polypurine, AT-rich) regions are masked besides the interspersed
+repeats. For database searches the default setting is recommended, but
+sometimes, e.g. when using the masked sequence to predict the presence
+of exons, it may be better to skip the low complexity masking.
+```
+
 ### Scripts
 
 * `f2-clagr3-hardmask.sh`: Works as expected (default settings)
