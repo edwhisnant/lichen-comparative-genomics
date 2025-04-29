@@ -4,11 +4,11 @@ There are some questions about which masking protocol is the "better" protocol.
 
 There are three main types of maskings:
 
-1. Hard-masking: repetitive sequences are replaced with `N` or `X`. Here you are losing information about the sequences, due to nucleotides being replaced.
+1. Hard-masking: repetitive sequences are replaced with `N` or `X`. Here you are losing information about the sequences, due to nucleotides being replaced with unknowns. This is the most strict masking procedure.
 
 2. Soft-masking: repetitive sequences are replaced with lower-case versions of the letters. Here, information is retained after masking.
 
-3. Unmasked: The genomes represent all of the assembled nuceotides, unchanged.
+3. Unmasked: The genomes represent all of the assembled nuceotides unchanged.
 
 *RepeatMasker* has other options, including options to soft-mask and to skip low-complexity regions.
 
