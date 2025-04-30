@@ -1,10 +1,16 @@
 #!/usr/bin/bash
 
-#SBATCH --mem-per-cpu=32G  # Memory per CPU
+#SBATCH --mem-per-cpu=16G  # Memory per CPU
 #SBATCH -c 8               # Number of threads per process
-#SBATCH --output=/hpc/group/bio1/ewhisnant/comp-genomics/quality-control/logs/busco_%A_%a.out
-#SBATCH --error=/hpc/group/bio1/ewhisnant/comp-genomics/quality-control/logs/busco_%A_%a.err
+#SBATCH --output=/hpc/group/bio1/ewhisnant/comp-genomics/quality-control/logs/busco_analysis.out
+#SBATCH --error=/hpc/group/bio1/ewhisnant/comp-genomics/quality-control/logs/busco_analysis.err
 #SBATCH --partition=common
+
+
+GENOMES=/hpc/group/bio1/ewhisnant/comp-genomics/genomes
+OUTPUT=/hpc/group/bio1/ewhisnant/comp-genomics/quality-control/busco
+GENERATE_PLOT=/hpc/group/bio1/ewhisnant/miniconda3/envs/busco/bin/generate_plot.py
+
 
 # Activate the conda environment
 source $(conda info --base)/etc/profile.d/conda.sh
@@ -13,6 +19,8 @@ conda activate busco
 ################################################################################################
 ############                 STEP 2: ANALYZING THE OUTPUT OF BUSCO                  ############
 ################################################################################################
+
+OUTPUT=/hpc/group/bio1/ewhisnant/comp-genomics/quality-control/busco
 
 ## Change the directory to the BUSCO summary directory
 cd ${OUTPUT}/BUSCO_summary
@@ -26,12 +34,14 @@ COMBINED_SUMMARY_FILE="${BUSCO_SUMMARY_DIR}/combined_summary.tsv"
 ################################################################################################
 
 # Write the header to the combined summary file
-# echo -e "Organism\tNumber of scaffolds\tNumber of contigs\tTotal length\tPercent gaps\tScaffold N50\tContigs N50\tComplete_BUSCOs\tSingle_Copy_BUSCOs\tDuplicated_BUSCOs\tFragmented_BUSCOs\tMissing_BUSCOs\tTotal_BUSCOs" > "$COMBINED_SUMMARY_FILE"
+echo -e "Organism\tNumber of scaffolds\tNumber of contigs\tTotal length\tPercent gaps\tScaffold N50\tContigs N50\tComplete_BUSCOs\tSingle_Copy_BUSCOs\tDuplicated_BUSCOs\tFragmented_BUSCOs\tMissing_BUSCOs\tTotal_BUSCOs" > "$COMBINED_SUMMARY_FILE"
 
 # Loop through each summary file in the directory
 for file in ${BUSCO_SUMMARY_DIR}/short_summary.specific.ascomycota_odb12.*.txt; do
+    
     # Extract the organism name from the filename
-    organism=$(basename "$file" | sed -E 's/short_summary\.specific\.ascomycota_odb12\.([^.]+)\.txt/\1/')
+    #organism=$(basename "$file" | sed -E 's/short_summary\.specific\.ascomycota_odb12\.([^.]+)\.txt$/\1/')
+    organism=$(basename "$file" | cut -d '.' -f4- | sed 's/\.txt$//')
 
     # Extract the Assembly Statistics section
     stats=$(awk '/Assembly Statistics:/ {flag=1; next} flag && NF {print} /^$/ {flag=0}' "$file")
@@ -70,8 +80,10 @@ echo "Combined summary has been saved to ${COMBINED_SUMMARY_FILE}"
 # Clean the output of the BUSCO analysis
     # Ensure we are in the BUSCO summary directory
 cd ${OUTPUT}/BUSCO_summary
-BUSCO_SUMMARY_R=/hpc/group/bio1/ewhisnant/comp-genomics/scripts/busco_summary_cleaner.R
-Rscript ${BUSCO_SUMMARY_R}
+
+# Python script to rename the headers and calculate the percentage completeness of the BUSCOs
+BUSCO_SUMMARY_PY=/hpc/group/bio1/ewhisnant/comp-genomics/scripts/busco/busco_summary_cleaner.py
+python3 ${BUSCO_SUMMARY_PY}
 
 ################################################################################################
 ############               STEP 3: RUN BUSCO COMPLETENESS ANALYSIS                  ############
