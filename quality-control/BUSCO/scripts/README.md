@@ -12,7 +12,7 @@ This is a script that compiles all of the summary pages from the output of `01_b
 
 Here is the link to the shell script: [02_busco_analysis_template.sh](https://github.com/edwhisnant/genome_annotation_programs/blob/main/quality-control/BUSCO/scripts/02_busco_analysis_template.sh)
 
-Here is the link to the associated Python script: [busco_summary_cleaner.R](https://github.com/edwhisnant/genome_annotation_programs/blob/main/quality-control/BUSCO/scripts/busco_summary_cleaner.py)
+Here is the link to the associated Python script: [busco_summary_cleaner.py](https://github.com/edwhisnant/genome_annotation_programs/blob/main/quality-control/BUSCO/scripts/busco_summary_cleaner.py)
 
 Changed to a python script due to issues calling the Rscript from the shell. Python script accomplishes the same tasks as before. 
 
