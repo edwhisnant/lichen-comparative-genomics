@@ -14,7 +14,7 @@ Here is the link to the shell script: [02_busco_analysis_template.sh](https://gi
 
 Here is the link to the associated Python script: [busco_summary_cleaner.R](https://github.com/edwhisnant/genome_annotation_programs/blob/main/quality-control/BUSCO/scripts/busco_summary_cleaner.py)
 
-The busco conda environment has an installation of R built in. The R script should be run within the `busco` conda env to ensure it works as intended.
+Changed to a python script due to issues calling the Rscript from the shell. Python script accomplishes the same tasks as before. 
 
 ## OVERVIEW OF WHAT THESE DO:
 
