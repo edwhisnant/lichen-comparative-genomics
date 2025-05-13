@@ -32,6 +32,12 @@ In the Perusiariales, there is a single non-lichenized species in the the Pertus
 
 ### Within the Ostropales
 
+The overall orthogroup copy-number matrix was filtered for the six genomes in the Ostropales. Then they were split into the two families, the Stictidaceae and Graphidaceae, with three genomes in each (n = 3 per family). The data was cleaned of orthogroups with zero copies in all genomes, leaving 7332 orthogroups for this analysis. Using the remaining orthogroups and grouping by family, a Wilcoxin rank-sum test was conducted to identify significant differences in copy number among orthogroups and between the two families. Using the raw output of the Wilcoxin rank-sum test, 163 orthogroups were found to be significantly different (p < 0.05) between the Graphidaceae and Stictidaceae. However, after imposing either a Holm-Bonferonni correction or a Benjamini-Hochberg FDR correction, none of the orthogroups stood out as significantly different.
+
+Next, we filtered for orthogroups with more extreme differences, i.e., an effect-size filter, prior to the Wilcoxin rank-sum test to reduce some of the effects of FDR correction. First, we filtered for differences in mean absolute copy number between the Stictidaceae and Graphidaceae, only keeping orthogoups with at least a two-copy number difference (mean_S - mean_G > 2). Then, we conducted a Wilcoxin rank-sum test comparing the Stictidaceae and Graphidaceae on these orthgroups. Based on the raw output, five orthogroups were considered to be significantly different (p < 0.05) between the Stictidaceae and Graphidaceae. However, after imposing Benjamini-Hochberg FDR correction, zero orthogroups are considered significantly different. 
+
+Imposing an even stricter effect-size filter, we filtered for at least a two-fold difference in copy-number between the two families. Values were log2 transformed and filtered. 
+
 ### Within the Pertusiariales
 
 ### In comparison with other genomes in the Lecanoromycetes
