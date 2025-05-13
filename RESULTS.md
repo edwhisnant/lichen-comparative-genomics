@@ -28,4 +28,10 @@ Next, we specified the Stictidaceae more precisely by their symbiotic lifestyle.
 
 In the Perusiariales, there is a single non-lichenized species in the the Pertusariaceae (*Agyrium rufum*). In this taxa, 7 orthogroups are uniquely absent, but present in all other genomes. Additionally, 18 orthogroups are uniquely present in this orthogroup compared to the rest of the genomes. If we simply group genonomes by their lifestyle, we can group genomes by whether they are facultative, non-lichenized, or lichenized genomes. Previously, we explained that 18 orthogroups are present and 13 are absent uniquesly in the facultative species *Stictis urceolata* (Ostropales, Stictidaceae). To understand if the losses of lichenization are geneticically similar in the Stictidaceae and Pertusiariaceae, we grouped all non-lichenized taxa into a single group and found that there are zero orthogroups that are uniquely present or absent based on being non-lichenized.
 
-## A better method may need use statistical testing for differences in gene copy number rather than binary differences...
+## Finding significant differences in copy number between groups
+
+### Within the Ostropales
+
+### Within the Pertusiariales
+
+### In comparison with other genomes in the Lecanoromycetes
