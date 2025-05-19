@@ -12,5 +12,7 @@ To identify orthogroups associated with de-lichenization ("losses"), we grouped 
 
 To address the large discrepency in sample size we also conducted the Wilcoxin ranksum two-sided test using a two step filtering. First, the 21,307 orthogroups were tested using the methods described previously. However, this time we used a more lenient alpha (alpha = 0.10) to gather orthogroups of interest wihtout FDR correction (preliminarily significantly different). This identified 1908 orthogroups for interest. Next, using these orthogroups, another Wilcoxin rank sum two-sided test was conducted using a permutation test (number of resamples = 10,000; random state seed = 42) and corrected for False Discovery Rate (FDR) using the Benjamini-Hochberg FDR correction for 1908 tests. Cliff's Delta was calculated for to examine effect size.
 
+Using the 665 orthogroups that were differntially abundant in the de-lichenized taxa, we extracted the amino acid orthogroup fasta files from OrthoFinder, and analyzed these using eggNOGMapper (v2.1.12), with DIAMOND (v2.1.11), MMSeqs2 (v17.b804f), Pfam (v___), and used the eggNOG Ascomycota database (taxid: 4890; v5.0.2).
+
 ## Comparative genomics incorporating the Eurotiomycetes
 
