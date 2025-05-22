@@ -32,7 +32,7 @@ In the Perusiariales, there is a single non-lichenized species in the the Pertus
 
 ### Within the Ostropales
 
-The overall orthogroup copy-number matrix was filtered for the six genomes in the Ostropales. Then they were split into the two families, the Stictidaceae and Graphidaceae, with three genomes in each (n = 3 per family). The data was cleaned of orthogroups with zero copies in all genomes, leaving 7332 orthogroups for this analysis. Using the remaining orthogroups and grouping by family, a Wilcoxin rank-sum test was conducted to identify significant differences in copy number among orthogroups and between the two families. Using the raw output of the Wilcoxin rank-sum test, 163 orthogroups were found to be significantly different (p < 0.05) between the Graphidaceae and Stictidaceae. However, after imposing either a Holm-Bonferonni correction or a Benjamini-Hochberg FDR correction, none of the orthogroups stood out as significantly different.
+The overall orthogroup copy-number matrix was filtered for the six genomes in the Ostropales. Then they were split into the two families, the Stictidaceae and Graphidaceae, with three genomes in each (n = 3 per family). The data was cleaned of orthogroups with zero copies in all genomes, leaving 7332 orthogroups for this analysis. Using the remaining orthogroups and grouping by family, a Wilcoxin rank-sum test was conducted to identify significant differences in copy number among orthogroups and between the two families. Using the raw p-value (uncorrected) of the Wilcoxin rank-sum test, 163 orthogroups were found to be significantly different (p < 0.05) between the Graphidaceae and Stictidaceae. However, after imposing a Benjamini-Hochberg FDR correction, none of the orthogroups stood out as significantly different.
 
 ### Within the Pertusiariales
 
@@ -44,7 +44,7 @@ To identify orthogroups associated with "losses" of lichenization (de-lichenizat
 
 ![Alt text](https://github.com/edwhisnant/lichen-comparative-genomics/blob/main/misc/wilcoxin-filtered-norm-gene-copy-by-ncbi-tax.png)
 
-First, we looked for orthogroups that were strictly absent in the de-lichenized taxa (Stictidaceae and *Agyrium rufum*), but present in other lichenized taxa (n = 102) and idendified seven (7) orthgroups with a mean copy number equal to 0
+First, we looked for orthogroups that were strictly absent in the de-lichenized taxa (Stictidaceae and *Agyrium rufum*), but present in other lichenized taxa (n = 102) and idendified seven (7) orthgroups with a mean copy number equal to 0 in the non-lichenized genomes that were present in the majority of lichenized genomes. The genes identified have the following function: 1) FAD binding 2) guanyltransferase Thg1, that adds GMP to the 5' end of tRNA after transcription and RNase P cleavage, 3) PAS domain, RGS domain protein, 4)Marvel-domain, membrane asscoiating domain protein, 5) GAL4-like Zn(II)2Cys6 (or C6 zinc) binuclear cluster DNA-binding domain, 6) Aspartic peptidase domain superfamily, integral membrane protein, and 7) a Clr5 domain protein.
 
 First, looking for which 
 
