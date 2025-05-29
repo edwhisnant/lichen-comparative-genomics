@@ -25,7 +25,7 @@ Orthologs were identified with OrthoFinder (v3.0.1b1) using the annotated protei
 
 ## Phylogenetic analysis with PHYall
 
-PHYall (v____ was used to define the species tree for this analysis. Using the 119 genomes, BUSCO ascomycota_odb12 gene models were used to identify single-copy orthologs shared among the genomes. Shared orthologs were aligned using hmmalign (v___) and scored using PhyKIT to compute the treeness/RCV scores (toverr). The top 300 markers were filtered and gene tree's were constructed using IQ-Tree (v___). The species tree was constructed using ASTER, using both consensus and concatenate methods.
+PHYall (v2.2.0) was used to define the species tree for this analysis. Using the 119 genomes, BUSCO ascomycota_odb12 gene models were used to identify single-copy orthologs shared among the genomes. Shared orthologs were aligned using hmmalign (v___) and scored using PhyKIT to compute the treeness/RCV scores (toverr). The top 300 markers were filtered and gene tree's were constructed using IQ-Tree (v___). The species tree was constructed using ASTER, using both consensus and concatenate methods.
 
 
 
