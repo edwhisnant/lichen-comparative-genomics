@@ -1,16 +1,20 @@
 # Future Directions
 
-## 1. Slightly change the genome filtering methodology, to use the metric 'Complete BUSCO (%)' versus 'Single-copy BUSCO (%)', which is a more standard metric, and would allow for the addition of ~20 more genomes. The cutoff will still be 95%.
+## 1. Slightly change the genome filtering methodology, to use the metric 'Complete BUSCO (%)' versus 'Single-copy BUSCO (%)'
+
+**DONE: MAY 28th, 2025**
 
 *Why do this?* 
+
+This is a more standard metric, and would allow for the addition of ~20 more genomes. The cutoff will still be 95%.
 
 1. In corporate more Peltigerales genomes. The *Lobraria* genomes (Peltigerales) which seem very different compared to all of the other lineages in the Lecanoromycetes.
 
 2. Incorporate more genomes from the Pertusariaceae. It is currently just *Agyrium*, which makes comparsions difficult because it is unclear if the differences in orthogroup copy number are due to *Agyrium* being non-lichenized, or if this is a lineage difference.
 
-**NEED TO CHECK IF OTHER LINEAGES ARE ALSO VERY UNDER-REPRESENTED AND SEE IF THERE IS A WAY TO INCORPORATE THESE**
-
 ## 2. Incorporate transcriptome (RNA-seq) information into the gene prediction and modeling
+
+**THIS IS NOT IMMEDIATELY OBVIOUS, ESPECIALLY ON WHERE TO FIND THIS DATA**
 
 This has been shown to substantially impact the gene predictions and improves the capability to identify locations of introns and alternate splicing sites.
 
