@@ -4,9 +4,7 @@
 
 ## Summary of genomic representation and summary of OrthoFinder results
 
-For the comparative genomics, we utlized 119 genomes representing four subclasses (plus one representing genomes of uncertain placement), __ orders (plus one representing uncertain ordinal placement), __ familes (plus one representing uncertain familial placement), and __ genera (one representing a genome that lacks placement within a genus) in the Lecanoromycetes. Using these genomes, we analyzed their genomically predicted proteomes via OrthoFinder (v____). For 119 genomes we used 1,173,166 genes, with 1,139809 genes (97.2%) assigned to 32,214 orthogroups. 3988 genes (0.3%) were assigned to species specific orthogroups. Orthogroups incldued 35.4 genes on average, with the median orthogroup size being six genes. 763 orthogroups represent the core, with 763 orthogroups being present in all 119 genomes, 187 of which are considered single-copy orthogroups.
-
-
+For the comparative genomics, we utlized 119 genomes representing four subclasses (plus one representing genomes of uncertain placement), 14 orders (plus one representing uncertain ordinal placement), 23 familes (plus one representing uncertain familial placement), and 57 genera (one representing a genome that lacks placement within a genus) in the Lecanoromycetes. Using these genomes, we analyzed their genomically predicted proteomes via OrthoFinder (v____). For 119 genomes we used 1,173,166 genes, with 1,139809 genes (97.2%) assigned to 32,214 orthogroups. 3988 genes (0.3%) were assigned to species specific orthogroups. Orthogroups incldued 35.4 genes on average, with the median orthogroup size being six genes. 763 orthogroups represent the core, with 763 orthogroups being present in all 119 genomes, 187 of which are considered single-copy orthogroups.
 
 
 # May 4th, 2025
