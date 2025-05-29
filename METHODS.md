@@ -27,8 +27,6 @@ Orthologs were identified with OrthoFinder (v3.0.1b1) using the annotated protei
 
 PHYall (v2.2.0) was used to define the species tree for this analysis. Using the 119 genomes, BUSCO ascomycota_odb12 gene models were used to identify single-copy orthologs shared among the genomes. Shared orthologs were aligned using hmmalign (v___) and scored using PhyKIT to compute the treeness/RCV scores (toverr). The top 300 markers were filtered and gene tree's were constructed using IQ-Tree (v___). The species tree was constructed using ASTER, using both consensus and concatenate methods.
 
-
-
 ## Analysis with DRAM
 
 119 soft-masked genomes were annotated and analyzed by DRAM (v1.5.0), using DRAM databases (accessed and downloaded 05/28/2025). Our installation of DRAM uses KOfam (Kofamkoala; Aramaki et al., 2020), Pfam (Mistry et al., 2021), dbCAN (v11; Yin et al., 2012), MEROPS (Rawlings et al., 2018), and VOG annotations (version latest as of 05/28/2025; Thannesberger et al., 2017).
