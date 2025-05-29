@@ -10,6 +10,14 @@ For the comparative genomics, we utlized 119 genomes representing four subclasse
 
 ![Alt text](https://github.com/edwhisnant/lichen-comparative-genomics/blob/main/misc/norm-gene-copy-by-ncbi-tax-250528.png)
 
+## Identifying orthogroups that are significantly different in Lichenized & Facultative taxa versus Lichenized taxa
+
+For each orthogroup (n = 23,789), a Wilcoxin rank-sum test was conducted comparing lichenized (n = 115) and de-lichenized taxa (n = 4) to identify orthogroups that differed significantly in their copy number. After correcting for FDR, 620 orthogroups were idenfied ("orthogroups of interest"). To measure magnitude of this difference we used Cliff's Delta, a non-parametric measure of effect-size.
+
+**Plot of the orthogroups that were identified as significantly different in de-lichenized taxa. 620 orthogroups were identified as significantly different**
+
+![Alt text](https://github.com/edwhisnant/lichen-comparative-genomics/blob/main/misc/NL%26F-vs-L-norm-gene-copy-by-ncbi-tax-250528.png)
+
 # May 4th, 2025
 
 * **NOTE:** There is an updated analysis that incorporates more genomes into the OrthoFinder analysis. 
