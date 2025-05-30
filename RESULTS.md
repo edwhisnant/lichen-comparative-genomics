@@ -18,6 +18,22 @@ For each orthogroup (n = 23,789), a Wilcoxin rank-sum test was conducted compari
 
 ![Alt text](https://github.com/edwhisnant/lichen-comparative-genomics/blob/main/misc/NL%26F-vs-L-norm-gene-copy-by-ncbi-tax-250528.png)
 
+## Presence and absence of orthogroups
+
+First, we wanted to identify any orthogroups that were strictly present or absent in de-lichenized lineages (*Agyrium rufum* and Stictidaceae) versus lichenized lineages. When we look at orthogroups that are strictly present or absent in de-lichenized versus lichenized (where 100% of genomes in the group fit this criteria), there are zero orthogroups that are strictly present or absent. 
+
+** 95% threshold on lichenized taxa
+
+If we reduce the threshold slightly, and we look at orthogroups that are present in ≥95% of lichenized genomes and absent in ALL (100%) "de-lichenized" genomes, we still find zero orthogroups. If we look at orthogroups absent in ≥95% of lichenized, but present in ALL (100%) "de-lichenized" genomes, we find 8 orthogroups.
+
+**90% threshold on lichenized taxa
+
+We find two (2) orthogroups present in ≥90% of lichenized and absent in ALL (100%) "de-lichenized" groups. We also find 15 orthogroups absent in ≥90% of lichenized, but present in ALL of non-lichenized & facultative taxa. We find 1 orthogroup present in ≥90% of lichenized, absent in de-lichenized taxa.
+
+**85% threshold on lichenized taxa
+
+Six (6) orthogroups present in ≥85% of lichenized, but absent in ALL "de-lichenized" taxa. 18 orthogroups absent in ≥85% of lichenized, butpresent in ALL (100%) "de-lichenized" taxa.
+
 # May 4th, 2025
 
 * **NOTE:** There is an updated analysis that incorporates more genomes into the OrthoFinder analysis. 
